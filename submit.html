@@ -1,0 +1,12 @@
+
+	<form ng-model="submitform" ng-hide = "hidden" ng-disabled="submitform.$invalid"> 
+
+	<label>{{'Nickname'| translate}}:</label><input ng-model="name" type="text" name="nickname" value="" placeholder="John Doe" required>
+	<br/>
+	<label>{{'Review'| translate}}:</label><textarea ng-model="review" value="" name="Review" placeholder="Angular is" maxlength="255" required ></textarea>
+	<br/>
+	<p>{{'Character limit'| translate}}:{{ +255 - review.length}}</p>
+		
+	<input ng-click="submit(name ,review)" type="submit" name="submit" value="{{'Submit'|translate}}" >
+	
+	</form>

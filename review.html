@@ -1,0 +1,16 @@
+<div>
+	<h1> Angular Reviews</h1>
+	<select ng-model="sorting">
+	</select>
+
+	<div ng-repeat='key in reviews | start: (currentPage - 1) * pageSize | limitTo: pageSize'>
+		<p>Angular is {{key.review}}</p>
+		<p>By {{key.name}} @ {{key.time | date}}</p>
+		<hr>
+	</div>
+	
+<pagination total-items="reviews.length" items-per-page="pageSize" ng-model="currentPage" max-size="5" ng-disabled="maxPages()" 
+                        class="pagination-sm"></pagination>
+    
+
+</div>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Review Application</title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+    <script src="app.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="reviewApp" ng-controller="MyController">
+	<div ng-include="'language.html'"></div>
+	<br/>
+	<div ng-include="'submit.html'"></div>
+	<br/>	
+	<div ng-include="'review.html'" ng-show="show"></div>
+		
+</body>
+
+</html>
